@@ -32,7 +32,8 @@ Information about WCAG compliance and accessibility features.
 
 ## How to Contact Us
 
-- (No contact details configured yet.)
+- Phone: 0544417539
+- Phone (tel): tel:0544417539
 
 ### Contact form
 - URL: https://heichal-hatehila.zappy5.app
