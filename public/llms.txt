@@ -34,7 +34,7 @@ Information about WCAG compliance and accessibility features.
 
 - Phone: 0544417539
 - Phone (tel): tel:0544417539
-- Address: אילות השדה 2, אור עקיבא
+- Address: אילות השדה 2, אור עקיבא, ישראל
 
 ### Contact form
 - URL: https://heichal-hatehila.zappy5.app
