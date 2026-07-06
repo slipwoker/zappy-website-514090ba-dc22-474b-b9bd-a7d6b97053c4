@@ -4677,6 +4677,137 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 }
 /* /Zappy custom logo size */
 
+
+/* Added Component Styles */
+.gallery-gallerygrid {
+  background-color: #1a1a2e;
+  padding: 80px 20px;
+  direction: rtl;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 240px;
+  gap: 16px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background-color: #2a2a3e;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-item:focus-within {
+  outline: 2px solid var(--primary, #EDE1D2);
+  outline-offset: 2px;
+}
+
+.gallery-item--tall {
+  grid-row: span 2;
+}
+
+.gallery-item--wide {
+  grid-column: span 2;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.05);
+}
+
+/* Overlay effect on hover */
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.3) 0%,
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 220px;
+    gap: 14px;
+  }
+  
+  .gallery-item--wide {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-gallerygrid {
+    padding: 60px 16px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+    gap: 12px;
+  }
+  
+  .gallery-item--wide {
+    grid-column: span 2;
+  }
+  
+  .gallery-item--tall {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-gallerygrid {
+    padding: 40px 12px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 280px;
+    gap: 12px;
+  }
+  
+  .gallery-item--wide,
+  .gallery-item--tall {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
