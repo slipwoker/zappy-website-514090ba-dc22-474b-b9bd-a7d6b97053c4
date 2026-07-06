@@ -4808,6 +4808,12 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
     grid-row: span 1;
   }
 }
+/* Font pairing applied */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Raleway:wght@400&display=swap');
+:root { --font-heading: 'Cinzel', sans-serif; --font-body: 'Raleway', sans-serif; }
+body { font-family: 'Raleway', sans-serif; font-weight: 400; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Cinzel', sans-serif; font-weight: 600; }
+
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
